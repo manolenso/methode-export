@@ -1,4 +1,4 @@
-﻿#target Photoshop
+#target Photoshop
 
 // fixer les préférences sur pixels
 var originalRulerUnits = app.preferences.rulerUnits
@@ -17,7 +17,7 @@ var history = document.activeHistoryState;
 //.---------------------------------------------------------------
 var filename = prompt ("Entrer le nom du fichier JPEG pour TV Mag", "","Nom du fichier :");
 var extension = filename.split('.').pop();
-if(filename.split('.').lenght <= 1){
+if(filename.split('.').length <= 1){
     extention = 'jpg';
     filename += '.jpg';
     }
