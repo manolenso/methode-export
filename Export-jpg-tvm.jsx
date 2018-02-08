@@ -31,7 +31,7 @@ jpegSaveOptions.formatOptions = FormatOptions.STANDARDBASELINE
 jpegSaveOptions.matte = MatteType.NONE
 jpegSaveOptions.quality = 12
 //app.activeDocument.exportdocument(file, jpgSaveOptions, true, Extension.LOWERCASE)
- 
+
 
 document.saveAs(file, jpegSaveOptions, true, Extension.LOWERCASE);
 
