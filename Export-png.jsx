@@ -31,5 +31,4 @@ document.exportDocument(file, ExportType.SAVEFORWEB, options);
 document.activeHistoryState = history;
 // restaurer les préférences a l'origine
 app.preferences.rulerUnits = originalRulerUnits
-//----------------------------------------------------
  

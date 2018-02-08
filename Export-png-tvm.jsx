@@ -4,17 +4,20 @@
 var originalRulerUnits = app.preferences.rulerUnits
 app.preferences.rulerUnits = Units.PIXELS
 
+function exportMethode() {
 
-if(app.documents.length < 1){
+    if(app.documents.length == 0){
+
     alert("Il n'y a pas de document ouvert! ");
+    return;
+
 }else{
    var document = app.activeDocument;
 }
+
 //sauvegarde de l'etat initial
 var history = document.activeHistoryState;
 
-
-//.---------------------------------------------------------------
 var filename = prompt ("Entrer le nom du fichier PNG pour TV Mag", "","Nom du fichier :");
 var extension = filename.split('.').pop();
 if(filename.split('.').length <= 1){
@@ -32,5 +35,7 @@ document.exportDocument(file, ExportType.SAVEFORWEB, options);
 document.activeHistoryState = history;
 // restaurer les préférences a l'origine
 app.preferences.rulerUnits = originalRulerUnits
-//----------------------------------------------------
+};
+
+exportMethode();
  

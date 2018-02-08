@@ -3,29 +3,27 @@
 // fixer les préférences sur pixels
 var originalRulerUnits = app.preferences.rulerUnits
 app.preferences.rulerUnits = Units.PIXELS
-
 function exportMethode() {
 
-    if(app.documents.length == 0){
-    alert("Il n'y a pas de document ouvert! ");
-    return;
+   if (app.documents.length == 0) {
 
+      alert("Il n'y a pas de document ouvert! ");
+      return;
 }else{
    var document = app.activeDocument;
 }
-
 //sauvegarde de l'etat initial
 var history = document.activeHistoryState;
 
-
-var filename = prompt ("Entrer le nom du fichier PNG pour le JDF", "","Nom du fichier :");
+var filename = prompt ("Entrer le nom du fichier PNG pour TV Mag", "","Nom du fichier :");
 var extension = filename.split('.').pop();
 if(filename.split('.').length <= 1){
     extention = 'png';
     filename += '.png';
     }
-var file = new File('//nas_vnx1.io.le-figaro.com/tvmag_inout$/production/JDF/import rct/autres/' + filename);
-
+//var file = new File('//nas_vnx1.io.le-figaro.com/tvmag_inout$/production/TVM/import rct/autres/' + filename);
+var file = new File('/D/Cloud/Dropbox/Imagerie&Autres/script/methode-export/test/' + filename);
+//D/Cloud/Dropbox/Imagerie&Autres/script/methode-export/test/
 var options = new ExportOptionsSaveForWeb();
 options.format = SaveDocumentType.PNG;
 options.PNG8 = false;
@@ -38,6 +36,3 @@ app.preferences.rulerUnits = originalRulerUnits
 };
 
 exportMethode();
-
-
- 
